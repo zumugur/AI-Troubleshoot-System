@@ -24,9 +24,8 @@ if not groq_api_key:
     st.error("❌ GROQ_API_KEY not found! Please set it in Streamlit Secrets or .env file.")
 
 
-
 # Set page config
-st.set_page_config(page_title="AI Troubleshooting System PoC", layout="wide", page_icon="🔧")
+st.set_page_config(page_title="AI DE24000 Elektrik Problem Çözümü", layout="wide", page_icon="🔧")
 
 # Center the Streamlit content with custom CSS
 st.markdown("""
@@ -44,8 +43,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Main Title and Subtitle
-st.title("AI DE24000 Elektrik Problem Çözümü")
+# Main Title in Blue
+st.markdown("""
+    <h1 style='text-align: center; color: blue;'>
+        AI DE24000 Elektrik Problem Çözümü
+    </h1>
+""", unsafe_allow_html=True)
+
+# (Optional) Subtitle
 # st.subheader("Get accurate troubleshooting instructions based on locomotive data and technical documentation.")
 
 # Load model
