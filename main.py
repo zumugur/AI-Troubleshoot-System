@@ -45,26 +45,27 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Main Title and Subtitle
-st.title("🧠AI Troubleshooting Assistance")
-st.subheader("Get accurate troubleshooting instructions based on locomotive data and technical documentation.")
+st.title("AI DE24000 Elektrik Problem Çözümü")
+# st.subheader("Get accurate troubleshooting instructions based on locomotive data and technical documentation.")
 
 # Load model
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="Llama3-8b-8192")
 
-# Define the prompt for the AI
+# Yapay zeka için prompt tanımı
 prompt = ChatPromptTemplate.from_template("""
-You are an advanced AI assistant specializing in locomotive troubleshooting. Based on the provided technical documentation, you will generate context-aware, accurate, and detailed troubleshooting instructions for the issue described by the user.
+Sen, lokomotif arıza teşhisinde uzmanlaşmış ileri düzey bir yapay zeka asistanısın. Sana sağlanan teknik dokümantasyonlara dayanarak, kullanıcının tanımladığı sorun için bağlama duyarlı, doğru ve detaylı arıza giderme talimatları üreteceksin.
 
-Context:
+Bağlam:
 <context>
 {context}
 <context>
 
-User Question:
+Kullanıcı Sorusu:
 {input}
 
-Provide a well-structured and elaborate response, using only the information retrieved from the documents.
+Yanıtını sadece dökümanlardan elde edilen bilgilere dayanarak, iyi yapılandırılmış ve ayrıntılı şekilde oluştur. Yanıtın Türkçe olmalı.
 """)
+
 
 def load_and_embed_documents():
     """Loads and embeds PDFs on startup."""
