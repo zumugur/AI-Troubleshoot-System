@@ -1,9 +1,4 @@
-AI Troubleshooting System PoC using GROQ and Langchain. This application assists users in troubleshooting locomotive issues by leveraging technical documents, machine learning models, and context-aware AI to provide accurate solutions.
-
-Updated README:
-markdown
-Copy
-Edit
+```markdown
 # AI Troubleshooting Assistance - Proof of Concept
 
 ## Overview
@@ -19,61 +14,67 @@ This repository contains a proof of concept (PoC) for an AI-driven troubleshooti
 
 ## Setup
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/ai-troubleshooting-system.git
-   cd ai-troubleshooting-system
-Install Dependencies: Make sure you have Python 3.7+ installed. Then, install the required libraries.
+### Prerequisites
 
-bash
-Copy
-Edit
+Make sure you have **Python 3.7+** installed and **Streamlit** is available.
+
+### 1. Clone the Repository:
+
+```bash
+git clone https://github.com/your-username/ai-troubleshooting-system.git
+cd ai-troubleshooting-system
+```
+
+### 2. Install Dependencies:
+
+Install the required libraries using the following:
+
+```bash
 pip install -r requirements.txt
-Set Up Environment Variables:
+```
 
-Create a .env file in the root directory and add your GROQ API key:
+### 3. Set Up Environment Variables:
 
-ini
-Copy
-Edit
-GROQ_API_KEY=your-groq-api-key
-Alternatively, you can configure the key via Streamlit Secrets (if using Streamlit cloud).
+- Create a `.env` file in the root directory and add your **GROQ API key**:
+  ```
+  GROQ_API_KEY=your-groq-api-key
+  ```
+- Alternatively, if you're using **Streamlit Cloud**, you can configure the key via **Streamlit Secrets**.
 
-Start the Application: Run the Streamlit app with:
+### 4. Start the Application:
 
-bash
-Copy
-Edit
+Run the Streamlit app with:
+
+```bash
 streamlit run app.py
-Application Workflow
-Step 1: Load Documents: The system loads and processes PDFs from the input_sample/ directory on startup. These documents are embedded and indexed for efficient retrieval.
+```
 
-Step 2: User Input: Users can input a query or issue description (e.g., "Locomotive DE24333 has electrical issue with control system").
+## Application Workflow
 
-Step 3: Document Retrieval & AI Answering: The system retrieves relevant documents, processes the query, and generates a context-aware troubleshooting response.
+1. **Load Documents:** The system loads and processes PDFs from the `input_sample/` directory on startup. These documents are embedded and indexed for efficient retrieval.
+2. **User Input:** Users can input a query or issue description (e.g., "Locomotive DE24333 has electrical issue with control system").
+3. **Document Retrieval & AI Answering:** The system retrieves relevant documents, processes the query, and generates a context-aware troubleshooting response.
+4. **Display Results:** The answer, along with the retrieved document context, is displayed on the Streamlit interface.
 
-Step 4: Display Results: The answer, along with the retrieved document context, is displayed on the Streamlit interface.
+## Troubleshooting
 
-Troubleshooting
-No PDFs Found: Ensure that the input_sample/ directory contains PDF files. If this directory is empty or the files are missing, the app will display an error.
+- **No PDFs Found:** Ensure that the `input_sample/` directory contains PDF files. If this directory is empty or the files are missing, the app will display an error message indicating that no PDFs were found.
+- **Embedding Issues:** If document embedding fails, verify that the PDFs are valid and can be processed by the **PyMuPDF** loader. Additionally, ensure that the **GROQ API** key is correctly configured.
+- **Slow Response:** The system may take time to generate answers depending on the complexity of the query and the size of the documents being processed.
 
-Embedding Issues: If document embedding fails, verify that the PDFs are valid and can be processed by the PyMuPDF loader.
+## License
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-yaml
-Copy
-Edit
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-### Key Points:
-- The description highlights the key purpose of the app: troubleshooting locomotive systems using AI and technical documentation.
-- The README covers setup instructions, usage flow, and possible issues like missing PDFs or failed embeddings.
+## Credits
 
+- **Langchain:** For providing powerful tools to chain language models and document processing.
+- **Streamlit:** For making the web interface quick and interactive.
+- **Hugging Face:** For providing transformer-based embeddings for document similarity matching.
+- **PyMuPDF:** For handling PDF document extraction.
 
+```
 
-
-
-
+This `README.md` includes all the necessary setup, features, and troubleshooting steps to ensure that the user can easily understand, install, and use the project. Feel free to modify the URLs or sections if you need them more specific to your project.
