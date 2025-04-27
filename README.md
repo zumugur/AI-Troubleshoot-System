@@ -1,4 +1,3 @@
-```markdown
 # AI Troubleshooting Assistance - Proof of Concept
 
 ## Overview
