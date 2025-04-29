@@ -75,7 +75,7 @@ Yanıtını sadece dökümanlardan elde edilen bilgilere dayanarak, iyi yapılan
 def load_and_embed_documents():
     """Loads and embeds PDFs on startup."""
     if "vectors" not in st.session_state:
-        st.session_state.embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+        st.session_state.embeddings = HuggingFaceEmbeddings(model_name="./all-MiniLM-L6-v2")
         all_docs = []
         pdf_directory = "./input_sample"
 
