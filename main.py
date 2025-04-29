@@ -1,4 +1,4 @@
-000 Elektrik Sistemi ile ilgili sorun nedir?
+000 
 import os
 import streamlit as st
 import time
