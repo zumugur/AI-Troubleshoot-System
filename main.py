@@ -1,3 +1,4 @@
+000 Elektrik Sistemi ile ilgili sorun nedir?
 import os
 import streamlit as st
 import time
@@ -101,7 +102,7 @@ def load_and_embed_documents():
 load_and_embed_documents()
 
 # Input box for user query
-user_input = st.text_input("💬 Enter your problem description or issue (e.g., 'Locomotive DE24333 has electrical issue with control system')")
+user_input = st.text_input("💬 DE24000 Lokomotif elektrik sistemi ile ilgili sorunun ne? ")
 
 if user_input:
     if "vectors" in st.session_state:
